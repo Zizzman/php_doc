@@ -1,0 +1,3045 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Configuration/">
+      
+      
+        <link rel="next" href="../Controler/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Console Commands - Documentation PHP et Symfony - Léo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentation-symfony-console-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Documentation PHP et Symfony - Léo" class="md-header__button md-logo" aria-label="Documentation PHP et Symfony - Léo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation PHP et Symfony - Léo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Console Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Documentation PHP et Symfony - Léo" class="md-nav__button md-logo" aria-label="Documentation PHP et Symfony - Léo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentation PHP et Symfony - Léo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%28php%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PHP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            PHP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PHP%20Cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PHP Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../php%20react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PHP React
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../php%20react%20mongodb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PHP React MongoDB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/Fichiers%20en%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestion des Fichiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/Gestion%20des%20Dates%20et%20Heures%20en%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestion des Dates et Heures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/String%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chaînes de caractères
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/Tableaux%20en%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tableaux en PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/try%20catch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try Catch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/enum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enumérations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/array_uintersect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fonction array_uintersect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/getProjectDir%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    getProjectDir()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Symfony
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Symfony
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Symfony%20doc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Présentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Areas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Areas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API%20Platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Platform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Asset%20management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Asset Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bundles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bundles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Console Commands
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Console Commands
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-symfony-console-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Symfony : Console Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Symfony : Console Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creer-une-commande-symfony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer une Commande Symfony
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Créer une Commande Symfony">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-commande-symfony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de Commande Symfony
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-la-commande" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer la Commande
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enregistrer la Commande">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-denregistrement-manuel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'Enregistrement Manuel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executer-une-commande" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exécuter une Commande
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametres-et-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramètres et Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paramètres et Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-commande-avec-argument" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de Commande avec Argument
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-de-parametres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de Paramètres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-commande-avec-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de Commande avec Option
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-doptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types d'Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-erreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Erreurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des Erreurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-gestion-derreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de Gestion d'Erreur
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-et-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conseils et Bonnes Pratiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-complementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ressources Complémentaires
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Controler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Event%20Dispatcher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Event Dispatcher
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Internationalization%20%28i18n%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Internationalization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Messenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Messenger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profiler%20%26%20debuging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profiler & Debugging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Services%20%26%20Dependency%20Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services & Dependency Injection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates%20twig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates Twig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/configuration-hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hiérarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/getParameter%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    getParameter()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/parameters-definition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Définition des paramètres
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/routing-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/services-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/variable-environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variables d'environnement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Controllers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/controllers/add%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Méthode add()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/controllers/getSession%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Méthode getSession()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/controllers/render%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Méthode render()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Doctrine
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Doctrine
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/Doctrine%20ORM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Doctrine ORM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/findAll%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    findAll()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/find%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    find()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/findOneBy%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    findOneBy()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/flush%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flush()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/getDoctrine%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    getDoctrine()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/getRepository%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    getRepository()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/persist%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    persist()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/remove%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    remove()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Event Dispatcher
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Event Dispatcher
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/event_dispatcher/dispatch%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    dispatch()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Formulaires
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Formulaires
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/createForm%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    createForm()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/form_start%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    form_start()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/form_row%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    form_row()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/form_end%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    form_end()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/liste%20d%C3%A9roulante/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Liste déroulante
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JSON
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            JSON
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/JSON/json_decode%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json_decode()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/JSON/json_encode%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json_encode()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_7" id="__nav_3_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Routing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Routing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/routing/generateUrl%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    generateUrl()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/routing/handleRequest%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    handleRequest()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/routing/redirectToRoute%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    redirectToRoute()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_8" id="__nav_3_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/security/addFlash%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    addFlash()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/security/denyAccessUnlessGranted%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    denyAccessUnlessGranted()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/security/isGranted%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    isGranted()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Outils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/brevo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brevo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/phpCsFixer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PhpCsFixer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/phpStan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PhpStan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/Rector%20doc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-symfony-console-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Symfony : Console Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Symfony : Console Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creer-une-commande-symfony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Créer une Commande Symfony
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Créer une Commande Symfony">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-commande-symfony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de Commande Symfony
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-la-commande" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer la Commande
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enregistrer la Commande">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-denregistrement-manuel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'Enregistrement Manuel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executer-une-commande" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exécuter une Commande
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametres-et-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramètres et Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paramètres et Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-commande-avec-argument" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de Commande avec Argument
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-de-parametres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de Paramètres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-commande-avec-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de Commande avec Option
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-doptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types d'Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-erreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Erreurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des Erreurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-gestion-derreur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de Gestion d'Erreur
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-et-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conseils et Bonnes Pratiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-complementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ressources Complémentaires
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Console Commands</h1>
+
+<h3 id="documentation-symfony-console-commands">Documentation Symfony : Console Commands</h3>
+<h4 id="description">Description</h4>
+<p>Les <strong>Console Commands</strong> dans Symfony permettent de créer des commandes en ligne de commande qui sont exécutées dans le terminal. Ces commandes peuvent être utilisées pour automatiser des tâches récurrentes, exécuter des scripts ou interagir avec votre application depuis la ligne de commande.</p>
+<p>Symfony fournit un outil de ligne de commande intégré, <code>bin/console</code>, qui permet d'exécuter des commandes système ou des commandes personnalisées.</p>
+<hr />
+<h3 id="creer-une-commande-symfony">Créer une Commande Symfony</h3>
+<p>Les commandes Symfony sont créées en étendant la classe <code>Command</code> de Symfony.</p>
+<h4 id="exemple-de-commande-symfony">Exemple de Commande Symfony</h4>
+<pre><code class="language-php">// src/Command/HelloCommand.php
+namespace App\Command;
+
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class HelloCommand extends Command
+{
+    protected static $defaultName = 'app:hello';
+
+    protected function configure()
+    {
+        $this-&gt;setDescription('Affiche un message de bienvenue');
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        $output-&gt;writeln('Bonjour Symfony!');
+        return Command::SUCCESS;
+    }
+}
+</code></pre>
+<p>Dans cet exemple :</p>
+<ul>
+<li>La classe <code>HelloCommand</code> étend <code>Command</code>.</li>
+<li>Le nom de la commande est défini par la constante <code>protected static $defaultName = 'app:hello';</code>.</li>
+<li>La méthode <code>execute()</code> définit la logique qui sera exécutée lors de l'appel de la commande.</li>
+</ul>
+<hr />
+<h3 id="enregistrer-la-commande">Enregistrer la Commande</h3>
+<p>Les commandes personnalisées doivent être enregistrées pour être reconnues par Symfony. Ce processus se fait automatiquement avec la commande <code>make:command</code>, mais vous pouvez aussi enregistrer la commande manuellement en la déclarant dans les services.</p>
+<h4 id="exemple-denregistrement-manuel">Exemple d'Enregistrement Manuel</h4>
+<p>Si vous n'utilisez pas <code>make:command</code>, vous pouvez enregistrer la commande dans <code>config/services.yaml</code> :</p>
+<pre><code class="language-yaml"># config/services.yaml
+services:
+    App\Command\HelloCommand:
+        tags: ['console.command']
+</code></pre>
+<p>Le tag <code>console.command</code> permet à Symfony d'enregistrer la commande pour qu'elle soit accessible via <code>bin/console</code>.</p>
+<hr />
+<h3 id="executer-une-commande">Exécuter une Commande</h3>
+<p>Une fois la commande définie et enregistrée, vous pouvez l'exécuter via la ligne de commande :</p>
+<pre><code class="language-bash">bin/console app:hello
+</code></pre>
+<p>Cela exécutera la commande et affichera le message <code>Bonjour Symfony!</code> dans le terminal.</p>
+<hr />
+<h3 id="parametres-et-arguments">Paramètres et Arguments</h3>
+<p>Les commandes peuvent accepter des paramètres et des arguments pour rendre les commandes dynamiques.</p>
+<h4 id="exemple-de-commande-avec-argument">Exemple de Commande avec Argument</h4>
+<pre><code class="language-php">// src/Command/GreetCommand.php
+namespace App\Command;
+
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class GreetCommand extends Command
+{
+    protected static $defaultName = 'app:greet';
+
+    protected function configure()
+    {
+        $this-&gt;setDescription('Affiche un message de salutation')
+             -&gt;addArgument('name', InputArgument::REQUIRED, 'Le nom de la personne');
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        $name = $input-&gt;getArgument('name');
+        $output-&gt;writeln('Bonjour, ' . $name . '!');
+        return Command::SUCCESS;
+    }
+}
+</code></pre>
+<p>Exécution de la commande avec un argument :</p>
+<pre><code class="language-bash">bin/console app:greet John
+</code></pre>
+<p>Résultat :</p>
+<pre><code>Bonjour, John!
+</code></pre>
+<h4 id="types-de-parametres">Types de Paramètres</h4>
+<ul>
+<li><strong>InputArgument::REQUIRED</strong> : L'argument est obligatoire.</li>
+<li><strong>InputArgument::OPTIONAL</strong> : L'argument est facultatif.</li>
+</ul>
+<hr />
+<h3 id="options">Options</h3>
+<p>Les options sont similaires aux arguments mais elles sont nommées et sont souvent facultatives.</p>
+<h4 id="exemple-de-commande-avec-option">Exemple de Commande avec Option</h4>
+<pre><code class="language-php">// src/Command/OptionCommand.php
+namespace App\Command;
+
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class OptionCommand extends Command
+{
+    protected static $defaultName = 'app:option';
+
+    protected function configure()
+    {
+        $this-&gt;setDescription('Affiche un message avec une option')
+             -&gt;addOption('upper', null, InputOption::VALUE_NONE, 'Affiche en majuscules');
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        $message = 'Bonjour Symfony!';
+
+        if ($input-&gt;getOption('upper')) {
+            $message = strtoupper($message);
+        }
+
+        $output-&gt;writeln($message);
+        return Command::SUCCESS;
+    }
+}
+</code></pre>
+<p>Exécution de la commande avec une option :</p>
+<pre><code class="language-bash">bin/console app:option --upper
+</code></pre>
+<p>Résultat :</p>
+<pre><code>BONJOUR SYMFONY!
+</code></pre>
+<h4 id="types-doptions">Types d'Options</h4>
+<ul>
+<li><strong>InputOption::VALUE_NONE</strong> : L'option ne prend pas de valeur.</li>
+<li><strong>InputOption::VALUE_REQUIRED</strong> : L'option nécessite une valeur.</li>
+<li><strong>InputOption::VALUE_OPTIONAL</strong> : L'option peut prendre une valeur, mais ce n'est pas obligatoire.</li>
+</ul>
+<hr />
+<h3 id="gestion-des-erreurs">Gestion des Erreurs</h3>
+<p>Lorsque des erreurs surviennent dans l'exécution d'une commande, vous pouvez gérer les exceptions ou valider les entrées.</p>
+<h4 id="exemple-de-gestion-derreur">Exemple de Gestion d'Erreur</h4>
+<pre><code class="language-php">// src/Command/ErrorCommand.php
+namespace App\Command;
+
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Exception\InvalidArgumentException;
+
+class ErrorCommand extends Command
+{
+    protected static $defaultName = 'app:error';
+
+    protected function configure()
+    {
+        $this-&gt;setDescription('Commande avec gestion d\'erreur')
+             -&gt;addArgument('age', InputArgument::REQUIRED, 'L\'âge de la personne');
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        $age = $input-&gt;getArgument('age');
+
+        if ($age &lt; 0) {
+            throw new InvalidArgumentException('L\'âge ne peut pas être négatif');
+        }
+
+        $output-&gt;writeln('Age: ' . $age);
+        return Command::SUCCESS;
+    }
+}
+</code></pre>
+<p>Exécution avec erreur :</p>
+<pre><code class="language-bash">bin/console app:error -5
+</code></pre>
+<p>Cela lancera une exception <code>InvalidArgumentException</code> avec le message d'erreur.</p>
+<hr />
+<h3 id="conseils-et-bonnes-pratiques">Conseils et Bonnes Pratiques</h3>
+<ul>
+<li><strong>Nommez correctement vos commandes</strong> : Utilisez des noms clairs et logiques, tels que <code>app:generate:report</code> ou <code>app:user:create</code>.</li>
+<li><strong>Documentez les commandes</strong> : Ajoutez des descriptions et des exemples d'utilisation dans la méthode <code>configure()</code> pour aider les utilisateurs.</li>
+<li><strong>Validez les entrées</strong> : Validez les arguments et options afin d’éviter des erreurs d'exécution.</li>
+<li><strong>Utilisez des services dans les commandes</strong> : Injectez des services dans vos commandes pour effectuer des actions plus complexes.</li>
+</ul>
+<hr />
+<h3 id="ressources-complementaires">Ressources Complémentaires</h3>
+<ul>
+<li><a href="https://symfony.com/doc/current/console.html">Documentation officielle Symfony : Console</a></li>
+<li><a href="https://symfony.com/doc/current/reference/console.html">Liste des Commandes Symfony par défaut</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

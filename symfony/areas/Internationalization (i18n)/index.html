@@ -1,0 +1,3025 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Forms/">
+      
+      
+        <link rel="next" href="../Messenger/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Internationalization - Documentation PHP et Symfony - Léo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentation-symfony-internationalization-i18n" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Documentation PHP et Symfony - Léo" class="md-header__button md-logo" aria-label="Documentation PHP et Symfony - Léo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation PHP et Symfony - Léo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Internationalization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Documentation PHP et Symfony - Léo" class="md-nav__button md-logo" aria-label="Documentation PHP et Symfony - Léo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentation PHP et Symfony - Léo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%28php%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PHP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            PHP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PHP%20Cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PHP Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../php%20react/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PHP React
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../php%20react%20mongodb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PHP React MongoDB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/Fichiers%20en%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestion des Fichiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/Gestion%20des%20Dates%20et%20Heures%20en%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestion des Dates et Heures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/String%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chaînes de caractères
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/Tableaux%20en%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tableaux en PHP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/try%20catch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Try Catch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/enum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enumérations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/array_uintersect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fonction array_uintersect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../doc/getProjectDir%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    getProjectDir()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Symfony
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Symfony
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Symfony%20doc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Présentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Areas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Areas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API%20Platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Platform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Asset%20management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Asset Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bundles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bundles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console%20Commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Console Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Controler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Event%20Dispatcher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Event Dispatcher
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Internationalization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Internationalization
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-symfony-internationalization-i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Symfony : Internationalization (i18n)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Symfony : Internationalization (i18n)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-de-la-locale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration de la locale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration de la locale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-de-la-locale-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration de la locale par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changer-la-locale-dynamiquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changer la locale dynamiquement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changer la locale dynamiquement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-avec-un-controleur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple avec un contrôleur :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traductions-avec-symfony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traductions avec Symfony
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Traductions avec Symfony">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-des-fichiers-de-traduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure des fichiers de traduction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-des-traductions-dans-le-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation des traductions dans le code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation des traductions dans le code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-controleur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un contrôleur :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-template-twig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un template Twig :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-formats-specifiques-a-la-locale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des formats spécifiques à la locale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des formats spécifiques à la locale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-avec-des-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple avec des dates :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-avec-des-devises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple avec des devises :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routage-avec-locale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routage avec locale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routage avec locale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-route-avec-locale-dans-lurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de route avec locale dans l'URL :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definir-la-locale-a-partir-de-lurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Définir la locale à partir de l'URL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-et-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conseils et Bonnes Pratiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-complementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ressources Complémentaires
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Messenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Messenger
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profiler%20%26%20debuging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profiler & Debugging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Services%20%26%20Dependency%20Injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services & Dependency Injection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates%20twig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templates Twig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/configuration-hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hiérarchie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/getParameter%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    getParameter()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/parameters-definition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Définition des paramètres
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/routing-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/services-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/configuration/variable-environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variables d'environnement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Controllers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/controllers/add%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Méthode add()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/controllers/getSession%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Méthode getSession()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/controllers/render%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Méthode render()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Doctrine
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Doctrine
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/Doctrine%20ORM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Doctrine ORM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/findAll%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    findAll()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/find%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    find()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/findOneBy%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    findOneBy()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/flush%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    flush()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/getDoctrine%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    getDoctrine()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/getRepository%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    getRepository()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/persist%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    persist()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Doctrine/remove%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    remove()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Event Dispatcher
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Event Dispatcher
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/event_dispatcher/dispatch%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    dispatch()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Formulaires
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Formulaires
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/createForm%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    createForm()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/form_start%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    form_start()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/form_row%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    form_row()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/form_end%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    form_end()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/form/liste%20d%C3%A9roulante/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Liste déroulante
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JSON
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            JSON
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/JSON/json_decode%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json_decode()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/JSON/json_encode%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    json_encode()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_7" id="__nav_3_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Routing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Routing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/routing/generateUrl%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    generateUrl()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/routing/handleRequest%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    handleRequest()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/routing/redirectToRoute%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    redirectToRoute()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_8" id="__nav_3_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/security/addFlash%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    addFlash()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/security/denyAccessUnlessGranted%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    denyAccessUnlessGranted()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/security/isGranted%28%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    isGranted()
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Outils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/brevo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brevo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/phpCsFixer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PhpCsFixer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/phpStan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PhpStan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/Rector%20doc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-symfony-internationalization-i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Symfony : Internationalization (i18n)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Symfony : Internationalization (i18n)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-de-la-locale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration de la locale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration de la locale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-de-la-locale-par-defaut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration de la locale par défaut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changer-la-locale-dynamiquement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changer la locale dynamiquement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changer la locale dynamiquement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-avec-un-controleur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple avec un contrôleur :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traductions-avec-symfony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traductions avec Symfony
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Traductions avec Symfony">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-des-fichiers-de-traduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure des fichiers de traduction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-des-traductions-dans-le-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation des traductions dans le code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation des traductions dans le code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-controleur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un contrôleur :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dans-un-template-twig" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dans un template Twig :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-formats-specifiques-a-la-locale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des formats spécifiques à la locale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des formats spécifiques à la locale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-avec-des-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple avec des dates :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-avec-des-devises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple avec des devises :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routage-avec-locale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routage avec locale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routage avec locale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-route-avec-locale-dans-lurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de route avec locale dans l'URL :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definir-la-locale-a-partir-de-lurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Définir la locale à partir de l'URL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-et-bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conseils et Bonnes Pratiques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources-complementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ressources Complémentaires
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Internationalization</h1>
+
+<h3 id="documentation-symfony-internationalization-i18n">Documentation Symfony : Internationalization (i18n)</h3>
+<h4 id="description">Description</h4>
+<p>L'internationalisation (i18n) dans Symfony permet de rendre votre application accessible dans plusieurs langues. Symfony fournit des outils pour gérer les traductions, la gestion des locales et l'adaptation des formats de date, heure, monnaie, etc.</p>
+<hr />
+<h3 id="configuration-de-la-locale">Configuration de la locale</h3>
+<p>La locale définit la langue et les paramètres culturels de votre application (comme le format de date, la devise, etc.).</p>
+<h4 id="configuration-de-la-locale-par-defaut">Configuration de la locale par défaut</h4>
+<p>Dans le fichier <code>config/packages/framework.yaml</code>, vous pouvez configurer la locale par défaut :</p>
+<pre><code class="language-yaml">framework:
+    default_locale: en
+</code></pre>
+<p>Cela définit la langue par défaut sur l'anglais (en).</p>
+<h4 id="changer-la-locale-dynamiquement">Changer la locale dynamiquement</h4>
+<p>Vous pouvez modifier la locale en fonction des préférences de l'utilisateur ou de l'URL. Pour cela, vous pouvez utiliser un <code>LocaleListener</code> ou un service personnalisé.</p>
+<h5 id="exemple-avec-un-controleur">Exemple avec un contrôleur :</h5>
+<pre><code class="language-php">// src/Controller/LanguageController.php
+
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+
+class LanguageController
+{
+    /**
+     * @Route(&quot;/language/{locale}&quot;, name=&quot;set_language&quot;)
+     */
+    public function setLanguage($locale, SessionInterface $session)
+    {
+        $session-&gt;set('_locale', $locale);
+        return new RedirectResponse($session-&gt;get('_previous', '/'));
+    }
+}
+</code></pre>
+<p>Ici, nous définissons un contrôleur pour changer la langue et la stocker dans la session.</p>
+<hr />
+<h3 id="traductions-avec-symfony">Traductions avec Symfony</h3>
+<p>Symfony utilise des fichiers de traduction pour stocker les traductions des chaînes de texte dans l'application. Ces fichiers sont placés dans le répertoire <code>translations/</code> et sont utilisés selon la locale active.</p>
+<h4 id="structure-des-fichiers-de-traduction">Structure des fichiers de traduction</h4>
+<p>Les fichiers de traduction sont organisés par langue et peuvent être de type <code>.yaml</code>, <code>.xlf</code>, <code>.php</code>, etc.</p>
+<p>Par exemple, un fichier de traduction pour l'anglais (<code>messages.en.yaml</code>) :</p>
+<pre><code class="language-yaml"># translations/messages.en.yaml
+greeting: &quot;Hello&quot;
+</code></pre>
+<p>Et un fichier pour le français (<code>messages.fr.yaml</code>) :</p>
+<pre><code class="language-yaml"># translations/messages.fr.yaml
+greeting: &quot;Bonjour&quot;
+</code></pre>
+<hr />
+<h3 id="utilisation-des-traductions-dans-le-code">Utilisation des traductions dans le code</h3>
+<p>Vous pouvez utiliser les traductions dans vos contrôleurs et templates en utilisant la fonction <code>trans</code> de Symfony.</p>
+<h4 id="dans-un-controleur">Dans un contrôleur :</h4>
+<pre><code class="language-php">// src/Controller/HelloController.php
+
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Contracts\Translation\TranslatorInterface;
+
+class HelloController
+{
+    public function greet(TranslatorInterface $translator)
+    {
+        $greeting = $translator-&gt;trans('greeting');
+        return new Response($greeting);
+    }
+}
+</code></pre>
+<h4 id="dans-un-template-twig">Dans un template Twig :</h4>
+<pre><code class="language-twig">{# templates/hello/greet.html.twig #}
+
+&lt;h1&gt;{{ 'greeting'|trans }}&lt;/h1&gt;
+</code></pre>
+<hr />
+<h3 id="gestion-des-formats-specifiques-a-la-locale">Gestion des formats spécifiques à la locale</h3>
+<p>Symfony permet également d'adapter le format des dates, heures, nombres et devises selon la locale active.</p>
+<h4 id="exemple-avec-des-dates">Exemple avec des dates :</h4>
+<pre><code class="language-php">use Symfony\Component\Intl\DateFormatter\IntlDateFormatter;
+
+$date = new \DateTime();
+$formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+echo $formatter-&gt;format($date);  // Affiche la date formatée en français
+</code></pre>
+<h4 id="exemple-avec-des-devises">Exemple avec des devises :</h4>
+<pre><code class="language-php">use Symfony\Component\Intl\NumberFormatter\NumberFormatter;
+
+$currencyFormatter = new NumberFormatter('fr_FR', NumberFormatter::CURRENCY);
+echo $currencyFormatter-&gt;formatCurrency(1234.56, 'EUR');  // Affiche 1 234,56 €
+</code></pre>
+<hr />
+<h3 id="routage-avec-locale">Routage avec locale</h3>
+<p>Symfony vous permet de gérer les routes avec ou sans la locale dans l'URL.</p>
+<h4 id="exemple-de-route-avec-locale-dans-lurl">Exemple de route avec locale dans l'URL :</h4>
+<pre><code class="language-yaml"># config/routes.yaml
+home:
+    path: /{_locale}/home
+    controller: App\Controller\HomeController::index
+    requirements:
+        _locale: en|fr|de
+</code></pre>
+<p>Cette configuration rend l'URL dynamique selon la locale choisie, par exemple <code>/en/home</code> ou <code>/fr/home</code>.</p>
+<h4 id="definir-la-locale-a-partir-de-lurl">Définir la locale à partir de l'URL</h4>
+<p>Dans votre contrôleur, vous pouvez récupérer la locale de l'URL via le paramètre <code>_locale</code>.</p>
+<pre><code class="language-php">public function index($_locale)
+{
+    // $_locale est la locale extraite de l'URL
+    // Vous pouvez l'utiliser pour changer dynamiquement la locale de l'application
+}
+</code></pre>
+<hr />
+<h3 id="conseils-et-bonnes-pratiques">Conseils et Bonnes Pratiques</h3>
+<ol>
+<li><strong>Stocker la locale dans la session</strong> : Si vous souhaitez que l'utilisateur garde sa langue préférée entre les différentes pages de votre application, stockez la locale dans la session ou dans un cookie.</li>
+<li><strong>Utiliser des fallback</strong> : Lorsque vous ajoutez des traductions, assurez-vous de prévoir une langue par défaut en cas de traduction manquante.</li>
+<li><strong>Utiliser des fichiers YAML ou XLIFF</strong> : Les fichiers de traduction en format YAML ou XLIFF sont très pratiques pour gérer plusieurs langues. L'option XLIFF est particulièrement utile pour une traduction professionnelle.</li>
+<li><strong>Traduction de format de données</strong> : Utilisez la fonction <code>trans</code> pour tout texte que vous souhaitez traduire, y compris les messages d'erreur, les messages de validation, etc.</li>
+<li><strong>Optimisation des traductions</strong> : Si vous avez un grand nombre de traductions, pensez à utiliser le cache de traduction pour améliorer les performances de votre application.</li>
+</ol>
+<hr />
+<h3 id="ressources-complementaires">Ressources Complémentaires</h3>
+<ul>
+<li><a href="https://symfony.com/doc/current/translation.html">Documentation officielle Symfony i18n</a></li>
+<li><a href="https://symfony.com/doc/current/intl.html">Symfony Localization</a></li>
+<li><a href="https://symfony.com/doc/current/translation/translation.html">Traduction avec Symfony et Twig</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
