@@ -1,0 +1,90 @@
+site_name: Documentation PHP et Symfony - Léo
+docs_dir: PHP
+theme:
+  name: material
+  palette:
+    scheme: slate
+
+nav:
+  - Accueil: '(php).md'
+  - PHP:
+    - "PHP Cheatsheet": "PHP Cheatsheet.md"
+    - "PHP React": "php react.md"
+    - "PHP React MongoDB": "php react mongodb.md"
+    - "Gestion des Fichiers": "doc/Fichiers en PHP.md"
+    - "Gestion des Dates et Heures": "doc/Gestion des Dates et Heures en PHP.md"
+    - "Chaînes de caractères": "doc/String PHP.md"
+    - "Tableaux en PHP": "doc/Tableaux en PHP.md"
+    - "Try Catch": "doc/try catch.md"
+    - "Enumérations": "doc/enum.md"
+    - "Fonction array_uintersect": "doc/array_uintersect.md"
+    - "getProjectDir()": "doc/getProjectDir().md"
+  
+  - Symfony:
+    - "Présentation": "symfony/Symfony doc.md"
+    - Areas:
+      - "API Platform": "symfony/areas/API Platform.md"
+      - "Asset Management": "symfony/areas/Asset management.md"
+      - "Bundles": "symfony/areas/Bundles.md"
+      - "Cache": "symfony/areas/Cache.md"
+      - "Configuration": "symfony/areas/Configuration.md"
+      - "Console Commands": "symfony/areas/Console Commands.md"
+      - "Controllers": "symfony/areas/Controler.md"
+      - "Event Dispatcher": "symfony/areas/Event Dispatcher.md"
+      - "Forms": "symfony/areas/Forms.md"
+      - "Internationalization": "symfony/areas/Internationalization (i18n).md"
+      - "Messenger": "symfony/areas/Messenger.md"
+      - "Migrations": "symfony/areas/Migrations.md"
+      - "Profiler & Debugging": "symfony/areas/Profiler & debuging.md"
+      - "Security": "symfony/areas/Security.md"
+      - "Services & Dependency Injection": "symfony/areas/Services & Dependency Injection.md"
+      - "Templates Twig": "symfony/areas/templates twig.md"
+      - "Testing": "symfony/areas/Testing.md"
+      - "Validation": "symfony/areas/validation.md"
+    - Concepts:
+      - Configuration:
+        - "Hiérarchie": "symfony/concepts/configuration/configuration-hierarchy.md"
+        - "getParameter()": "symfony/concepts/configuration/getParameter().md"
+        - "Définition des paramètres": "symfony/concepts/configuration/parameters-definition.md"
+        - "Routing Configuration": "symfony/concepts/configuration/routing-configuration.md"
+        - "Services Configuration": "symfony/concepts/configuration/services-configuration.md"
+        - "Variables d'environnement": "symfony/concepts/configuration/variable-environment.md"
+      - Controllers:
+        - "Méthode add()": "symfony/concepts/controllers/add().md"
+        - "Méthode getSession()": "symfony/concepts/controllers/getSession().md"
+        - "Méthode render()": "symfony/concepts/controllers/render().md"
+      - Doctrine:
+        - "Doctrine ORM": "symfony/concepts/Doctrine/Doctrine ORM.md"
+        - "findAll()": "symfony/concepts/Doctrine/findAll().md"
+        - "find()": "symfony/concepts/Doctrine/find().md"
+        - "findOneBy()": "symfony/concepts/Doctrine/findOneBy().md"
+        - "flush()": "symfony/concepts/Doctrine/flush().md"
+        - "getDoctrine()": "symfony/concepts/Doctrine/getDoctrine().md"
+        - "getRepository()": "symfony/concepts/Doctrine/getRepository().md"
+        - "persist()": "symfony/concepts/Doctrine/persist().md"
+        - "remove()": "symfony/concepts/Doctrine/remove().md"
+      - Event Dispatcher:
+        - "dispatch()": "symfony/concepts/event_dispatcher/dispatch().md"
+      - Formulaires:
+        - "createForm()": "symfony/concepts/form/createForm().md"
+        - "form_start()": "symfony/concepts/form/form_start().md"
+        - "form_row()": "symfony/concepts/form/form_row().md"
+        - "form_end()": "symfony/concepts/form/form_end().md"
+        - "Liste déroulante": "symfony/concepts/form/liste déroulante.md"
+      - JSON:
+        - "json_decode()": "symfony/concepts/JSON/json_decode().md"
+        - "json_encode()": "symfony/concepts/JSON/json_encode().md"
+      - Routing:
+        - "generateUrl()": "symfony/concepts/routing/generateUrl().md"
+        - "handleRequest()": "symfony/concepts/routing/handleRequest().md"
+        - "redirectToRoute()": "symfony/concepts/routing/redirectToRoute().md"
+      - Security:
+        - "addFlash()": "symfony/concepts/security/addFlash().md"
+        - "denyAccessUnlessGranted()": "symfony/concepts/security/denyAccessUnlessGranted().md"
+        - "isGranted()": "symfony/concepts/security/isGranted().md"
+
+  - Outils:
+    - "Brevo": "outils/brevo.md"
+    - "PhpCsFixer": "outils/phpCsFixer.md"
+    - "PhpStan": "outils/phpStan.md"
+    - "Rector": "outils/Rector doc.md"

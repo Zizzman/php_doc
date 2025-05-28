@@ -1,0 +1,4 @@
+#FOLDER 
+[[addFlash()]]
+[[denyAccessUnlessGranted()]]
+[[isGranted()]]

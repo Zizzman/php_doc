@@ -1,0 +1,21 @@
+#FOLDER 
+[[API Platform]]
+[[Asset management]]
+[[Bundles]]
+[[Cache]]
+[[Configuration]]
+[[Console Commands]]
+[[Controler]]
+[[Event Dispatcher]]
+[[Forms]]
+[[Internationalization (i18n)]]
+[[Messenger]]
+[[Migrations]]
+[[Profiler & debuging]]
+[[Security]]
+[[Services & Dependency Injection]]
+[[testing]]
+[[validation]]
+
+
+[[(phpsymfony)]]
