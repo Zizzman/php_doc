@@ -1,7 +1,15 @@
-#!/home/leonard.ziserman/perso/php_doc_pub/mkdocs-env/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import re
 import sys
+import os
+_env_lib = os.path.join(os.path.dirname(__file__), '..', 'lib')
+if os.path.isdir(_env_lib):
+    for _name in os.listdir(_env_lib):
+        _cand = os.path.join(_env_lib, _name, 'site-packages')
+        if os.path.isdir(_cand):
+            sys.path.insert(0, _cand)
+            break
 from mkdocs.__main__ import cli
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
