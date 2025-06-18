@@ -5,7 +5,7 @@
 [[Cache]]
 [[Configuration]]
 [[Console Commands]]
-[[Controler]]
+[[Controller]]
 [[Event Dispatcher]]
 [[Forms]]
 [[Internationalization (i18n)]]
