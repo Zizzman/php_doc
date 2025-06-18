@@ -36,7 +36,7 @@ nav:
       - "Cache": "symfony/areas/Cache.md"
       - "Configuration": "symfony/areas/Configuration.md"
       - "Console Commands": "symfony/areas/Console Commands.md"
-      - "Controllers": "symfony/areas/Controler.md"
+      - "Controllers": "symfony/areas/Controller.md"
       - "Event Dispatcher": "symfony/areas/Event Dispatcher.md"
       - "Forms": "symfony/areas/Forms.md"
       - "Internationalization": "symfony/areas/Internationalization (i18n).md"
